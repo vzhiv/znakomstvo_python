@@ -9,10 +9,41 @@
 # собирает ягоды с этого куста и с двух соседних с ним. Напишите программу для нахождения максимального числа ягод, 
 # которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 
+import random
+
 while True:
-    num = input('Введите количество элементов массива: ')
-    number = input('Введите число которые вы хотите найти: ')
-    if number.isdigit() == False or int(num) <= 0 or num.isdigit() == False or int(number) <= 0:
+    bush = input('Введите количество кустов на грядке: ')
+    if bush.isdigit() == False or int(bush) <= 0:
         print('Неверные данные, повторите ввод')
     else:
        break
+
+bush_berry = list()
+
+
+for i in range(int(bush)):
+    bush_berry.append(random.randint(0, 30))
+
+print(bush_berry)
+
+berry = 0
+max_berry = 0
+bush_i = 0
+
+for i in range(len(bush_berry)):
+    if(i == 0):
+        berry = bush_berry[i] + bush_berry[i + 1] + bush_berry[len(bush_berry) - 1]
+        if(berry > max_berry):
+            max_berry = berry
+            bush_i = i
+    if (i == len(bush_berry) - 1):
+        berry = bush_berry[i] + bush_berry[i - 1] + bush_berry[0]
+        if(berry > max_berry):
+            max_berry = berry
+            bush_i = i
+    else:
+        berry = bush_berry[i] + bush_berry[i - 1] + bush_berry[i + 1]
+        if(berry > max_berry):
+            max_berry = berry
+            bush_i = i
+print(f'Максимальное количество ягод будет перед кустом {bush_i + 1} и состовляет {max_berry}')
