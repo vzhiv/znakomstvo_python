@@ -1,0 +1,13 @@
+id,lastname,firsrname,econdname,phone
+1,Ivanov,Ivan,Ivanovich,71231234567
+2,Petrov,Petr,Petrovich,71239999999
+3,Petrov,Petr,Petrovich,71239999998
+4,Petrov,Roman,Petrovich,71239999997
+5,Beglov,Petr,Petrovich,71239999996
+6,Petrov,Petr,Petrovich,71239999995
+7,Zekrov,Vladimir,Petrovich,71239999994
+8,Petrov,Petr,Petrovich,71239999993
+9,Sidorov,Petr,Petrovich,71239999992
+11,Petrov,Petr,Petrovich,71239999990
+12,Petrov,Petr,Petrovich,71239999989
+13,Zarban,Kislel,Bogdanovich,89168301568
